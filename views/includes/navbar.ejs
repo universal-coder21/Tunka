@@ -1,0 +1,371 @@
+<!-- Improved Navbar with Bootstrap -->
+<style>
+  /* Enhanced styling for navbar */
+  .navbar {
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  /* Logo styling */
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: #fe424d;
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-brand:hover {
+    transform: scale(1.1);
+    color: #e63946;
+  }
+
+  /* Improved search styling */
+  .search-container {
+    position: relative;
+    max-width: 400px;
+  }
+
+  .search-inp {
+    border-radius: 25px;
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .search-inp:focus {
+    box-shadow: 0 0 0 3px rgba(254, 66, 77, 0.25);
+    border-color: #fe424d;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    z-index: 10;
+  }
+
+  /* Button styling */
+  .btn-search {
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-search:hover {
+    background-color: #e63946;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Nav links styling */
+  .nav-link {
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(254, 66, 77, 0.1);
+    color: #fe424d;
+  }
+
+  .nav-link.host {
+    background-color: #f8f9fa;
+    border-radius: 20px;
+  }
+
+  .nav-link.action {
+    font-weight: 600;
+  }
+
+  /* User menu */
+  .user-menu {
+    background-color: #f8f9fa;
+    border-radius: 25px;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .user-menu:hover {
+    background-color: #e9ecef;
+  }
+
+
+  /* Mobile optimizations */
+  @media screen and (max-width: 991px) {
+    .desktop-search {
+      display: none;
+    }
+
+    .mobile-search {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+
+    .navbar-nav {
+      margin-top: 1rem;
+    }
+
+    .nav-item {
+      width: 100%;
+      margin: 0.25rem 0;
+    }
+
+    .nav-link {
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .user-menu {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+    }
+
+    .navbar-brand {
+      font-size: 1.3rem;
+    }
+
+    .container {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+
+    }
+  }
+
+  .container {
+    flex-wrap: nowrap !important;
+
+  }
+
+  /* Small mobile devices */
+  @media screen and (max-width: 575px) {
+    .navbar {
+      padding: 0.5rem 0.5rem;
+    }
+
+    .navbar-brand {
+      font-size: 0.1rem;
+    }
+
+    .search-inp {
+      font-size: 0.85rem;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    #navbarContent {
+      position: absolute;
+      right: 0;
+      top: 30px;
+    }
+    #RightAA > li > a.nav-link {
+          background: #f744507a;;
+    }
+  }
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
+    .container {
+      position: relative;
+    }
+
+    #navbarContent {
+      position: absolute;
+      right: 0;
+      top: 30px;
+    }
+    #RightAA > li > a.nav-link {
+          background: #f744507a;;
+    }
+    
+}
+
+
+  @media screen and (min-width: 992px) {
+    .mobile-search {
+      display: none;
+    }
+
+    .desktop-search {
+      display: flex;
+      width: 100%;
+      max-width: 400px;
+    }
+ 
+  }
+
+  /* Animation for search appearance */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .search-container {
+    animation: fadeIn 0.3s ease-out;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg bg-white sticky-top">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="/listing">
+      <i class="fa-solid fa-compass"></i> Wanderlust
+    </a>
+
+    <!-- Mobile search - visible only on mobile -->
+    <div class="search-container mobile-search">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input class="form-control search-inp" type="search" placeholder="Search destinations..." aria-label="Search">
+    </div>
+
+    <!-- Hamburger menu for mobile -->
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarContent">
+      <!-- Desktop search - centered and only visible on desktop -->
+      <div class="mx-auto desktop-search">
+        <div class="search-container w-100">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input class="form-control search-inp" type="search" placeholder="Search destinations..." aria-label="Search">
+        </div>
+      </div>
+
+      <!-- Right-aligned menu items -->
+      <ul class="navbar-nav ms-auto align-items-center" id="RightAA">
+        <li class="nav-item my-1 my-lg-0">
+          <a class="nav-link" href="/listing">Explore</a>
+        </li>
+        <li class="nav-item my-1 my-lg-0">
+          <a class="nav-link host" href="/listing/new">
+            <i class="fa-solid fa-plus me-1"></i> Airbnb your home
+          </a>
+        </li>
+
+        <!-- Conditional rendering based on user login status -->
+        <% if(!currUser) { %>
+          <li class="nav-item my-1 my-lg-0">
+            <a class="nav-link action" href="/signup">Sign up</a>
+          </li>
+          <li class="nav-item my-1 my-lg-0">
+            <a class="nav-link action" href="/login">Log in</a>
+          </li>
+          <% } else { %>
+            <li class="nav-item dropdown my-1 my-lg-0">
+              <a class="nav-link user-menu d-flex align-items-center justify-content-center justify-content-lg-start"
+                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user me-1"></i> My Account
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end w-100 w-lg-auto">
+                <li><a class="dropdown-item" href="/user/profile">Profile</a></li>
+                <li><a class="dropdown-item" href="/user/bookings">My Bookings</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/logout">Log out</a></li>
+              </ul>
+            </li>
+            <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Optional: Show/hide search on scroll -->
+<script>
+  // Add smooth scroll behavior and search visibility toggle
+  document.addEventListener('DOMContentLoaded', function () {
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Only apply this effect on desktop
+      if (window.innerWidth >= 992) {
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          // Scrolling down & past threshold
+          navbar.style.transform = 'translateY(-100%)';
+        } else {
+          // Scrolling up or at top
+          navbar.style.transform = 'translateY(0)';
+        }
+      } else {
+        // Always show navbar on mobile
+        navbar.style.transform = 'translateY(0)';
+      }
+
+      lastScrollTop = scrollTop;
+    });
+
+    // Focus effect on search
+    const searchInputs = document.querySelectorAll('.search-inp');
+    searchInputs.forEach(input => {
+      input.addEventListener('focus', function () {
+        this.parentElement.style.boxShadow = '0 0 0 3px rgba(254, 66, 77, 0.25)';
+      });
+
+      input.addEventListener('blur', function () {
+        this.parentElement.style.boxShadow = 'none';
+      });
+    });
+
+    // Handle search form submission and ensure it works on both mobile and desktop
+    const searchForms = document.querySelectorAll('form[role="search"]');
+    searchForms.forEach(form => {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const searchInput = this.querySelector('input[type="search"]');
+        if (searchInput && searchInput.value.trim()) {
+          // Get search value and redirect
+          const searchQuery = encodeURIComponent(searchInput.value.trim());
+          window.location.href = `/listing/search?q=${searchQuery}`;
+        }
+      });
+    });
+
+    // Close navbar dropdown when clicking outside on mobile
+    document.addEventListener('click', function (e) {
+      if (window.innerWidth < 992) {
+        const navbarCollapse = document.getElementById('navbarContent');
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+          if (!navbarCollapse.contains(e.target) && !e.target.classList.contains('navbar-toggler')) {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+            bsCollapse.hide();
+          }
+        }
+      }
+    });
+
+    // Handle window resize events
+    window.addEventListener('resize', function () {
+      // Reset navbar transform when resizing
+      navbar.style.transform = 'translateY(0)';
+    });
+  });
+</script>

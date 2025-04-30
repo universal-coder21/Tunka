@@ -1,0 +1,316 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Social Share</title>
+  <style>
+    .share-button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .facebook { background-color: #4267B2; }
+    .twitter { background-color: #1DA1F2; }
+  </style>
+</head>
+<body>
+
+  <h2>Share This Page</h2>
+
+  <button class="share-button whatsapp" onclick="shareOnWhatsApp()">WhatsApp</button>
+  <button class="share-button facebook" onclick="shareOnFacebook()">Facebook</button>
+  <button class="share-button twitter" onclick="shareOnTwitter()">Twitter</button>
+
+  <script>
+    const currentUrl = encodeURIComponent(window.location.href);
+    const message = encodeURIComponent("Check this out: ");
+
+    function shareOnWhatsApp() {
+      const url = `https://wa.me/?text=${message}${currentUrl}`;
+      window.open(url, '_blank');
+    }
+
+    function shareOnFacebook() {
+      const url = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+      window.open(url, '_blank');
+    }
+
+    function shareOnTwitter() {
+      const url = `https://twitter.com/intent/tweet?text=${message}${currentUrl}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Sharing Buttons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .share-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .share-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .share-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .whatsapp { background-color: #25D366; }
+        .facebook { background-color: #1877F2; }
+        .twitter { background-color: #1DA1F2; }
+        .linkedin { background-color: #0A66C2; }
+        .telegram { background-color: #0088cc; }
+        .reddit { background-color: #FF5700; }
+        .pinterest { background-color: #E60023; }
+        .email { background-color: #D44638; }
+        
+        .content {
+            background-color: #f5f5f5;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .url-display {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            word-break: break-all;
+            text-align: left;
+        }
+        
+        .copy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+        
+        .success-message {
+            color: #4CAF50;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        @media (max-width: 600px) {
+            .share-container {
+                gap: 10px;
+            }
+            
+            .share-button {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Share This Page</h1>
+    
+    <div class="content">
+        <h2>Sample Content</h2>
+        <p>This is example content that demonstrates the social sharing functionality. Replace this with your own content.</p>
+        <p>When users click on any of the sharing buttons below, they can share this page with their contacts via various social media platforms.</p>
+    </div>
+    
+    <div class="share-container">
+        <a href="#" class="share-button whatsapp" id="whatsapp-share" title="Share on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="share-button facebook" id="facebook-share" title="Share on Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="share-button twitter" id="twitter-share" title="Share on Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="share-button linkedin" id="linkedin-share" title="Share on LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="share-button telegram" id="telegram-share" title="Share on Telegram">
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="#" class="share-button reddit" id="reddit-share" title="Share on Reddit">
+            <i class="fab fa-reddit-alien"></i>
+        </a>
+        <a href="#" class="share-button pinterest" id="pinterest-share" title="Share on Pinterest">
+            <i class="fab fa-pinterest-p"></i>
+        </a>
+        <a href="#" class="share-button email" id="email-share" title="Share via Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+    
+    <div>
+        <h3>Current Page URL</h3>
+        <div class="url-display" id="current-url"></div>
+        <button class="copy-button" id="copy-url">Copy URL</button>
+        <p class="success-message" id="copy-message">URL copied to clipboard!</p>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get current URL
+            const currentUrl = window.location.href;
+            document.getElementById('current-url').textContent = currentUrl;
+            
+            // Set up sharing links
+            const title = document.title;
+            const text = "Check out this page!";
+            
+            // WhatsApp sharing
+            document.getElementById('whatsapp-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                const whatsappUrl = `whatsapp://send?text=${encodeURIComponent(text + ' ' + currentUrl)}`;
+                const webWhatsappUrl = `https://web.whatsapp.com/send?text=${encodeURIComponent(text + ' ' + currentUrl)}`;
+                
+                // Try to open the app first
+                tryShare(whatsappUrl, webWhatsappUrl);
+            });
+            
+            // Facebook sharing
+            document.getElementById('facebook-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+                window.open(facebookUrl, '_blank');
+            });
+            
+            // Twitter sharing
+            document.getElementById('twitter-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(currentUrl)}`;
+                window.open(twitterUrl, '_blank');
+            });
+            
+            // LinkedIn sharing
+            document.getElementById('linkedin-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
+                window.open(linkedinUrl, '_blank');
+            });
+            
+            // Telegram sharing
+            document.getElementById('telegram-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                const telegramUrl = `tg://msg_url?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(text)}`;
+                const webTelegramUrl = `https://t.me/share/url?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(text)}`;
+                
+                tryShare(telegramUrl, webTelegramUrl);
+            });
+            
+            // Reddit sharing
+            document.getElementById('reddit-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                const redditUrl = `https://www.reddit.com/submit?url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(title)}`;
+                window.open(redditUrl, '_blank');
+            });
+            
+            // Pinterest sharing
+            document.getElementById('pinterest-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(currentUrl)}&description=${encodeURIComponent(text)}`;
+                window.open(pinterestUrl, '_blank');
+            });
+            
+            // Email sharing
+            document.getElementById('email-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                const emailSubject = encodeURIComponent(title);
+                const emailBody = encodeURIComponent(text + '\n\n' + currentUrl);
+                const emailUrl = `mailto:?subject=${emailSubject}&body=${emailBody}`;
+                window.location.href = emailUrl;
+            });
+            
+            // Copy URL functionality
+            document.getElementById('copy-url').addEventListener('click', function() {
+                const textArea = document.createElement('textarea');
+                textArea.value = currentUrl;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                const copyMessage = document.getElementById('copy-message');
+                copyMessage.style.opacity = '1';
+                setTimeout(() => {
+                    copyMessage.style.opacity = '0';
+                }, 2000);
+            });
+            
+            // Try to open app first, fall back to web version
+            function tryShare(appUrl, webUrl) {
+                const now = Date.now();
+                const timeout = 500;
+                
+                const blurHandler = () => {
+                    window.removeEventListener('blur', blurHandler);
+                    clearTimeout(fallbackTimeout);
+                };
+                
+                window.addEventListener('blur', blurHandler);
+                
+                const fallbackTimeout = setTimeout(() => {
+                    window.removeEventListener('blur', blurHandler);
+                    if (Date.now() - now < timeout + 100) {
+                        window.open(webUrl, '_blank');
+                    }
+                }, timeout);
+                
+                window.location.href = appUrl;
+            }
+        });
+    </script>
+</body>
+</html>

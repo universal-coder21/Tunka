@@ -1,0 +1,275 @@
+/* public\css\style.css */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #fe424d !important;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+    margin: 0 10px;
+
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+    color: #fe424d;
+}
+
+.f-info-socials,
+.f-info-links,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info-socials i:hover {
+    color: #fe424d;
+    cursor: pointer;
+    transform: translateY(-5px) ;
+    transition: transform 1s;
+
+}
+
+.f-info {
+    text-align: center;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    padding: 1.5rem 0;
+
+
+}
+
+.btn-custom-submit,
+.btn-custom-edit {
+    background-color: #fe424d !important;
+    border: none !important;
+    color: white !important;
+    transition: background-color 0.3s;
+}
+
+.btn-custom-edit:hover,
+.btn-custom-submit:hover {
+    background-color: #e63946 !important;
+}
+
+.btn-custom-delete {
+    background-color: #6c757d !important;
+    border: none !important;
+    color: white !important;
+}
+.btn-custom-cta-primary {
+    background-color: #f72b39 !important;
+    border: none !important;
+    color: white !important;
+    padding: 0.75rem !important;
+    font-weight: 500 !important;
+}
+.btn-custom-cta-primary:hover {
+    background-color: #e63946 !important;
+    color: white;
+}
+.btn-custom-cta-secondary {
+    border: 1px solid lime !important;
+    color: lime !important;
+    background-color: transparent !important;
+    padding: 0.75rem !important;
+    font-weight: 500 !important;
+}
+.btn-custom-cta-secondary:hover{
+    background-color: lime !important;
+    color: white !important;
+    transition: background-color 2s;
+}
+/* card */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.listing-links {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.listing-details{
+    /* box-shadow: -1px 0px 12px 2px #eccccc; */
+    /* border: 2px solid rgb(56, 55, 55); */
+    box-shadow: 0 4px 6px 0px rgb(0 0 0 / 0.2), 0 2px 4px 3px rgb(0 0 0 / 0.2) !important;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* add page */
+/* .add-btn{
+    background-color:#fe424d !important;
+    border:none !important;
+} */
+
+/* edit page */
+/* .edit-btn{
+    margin-top:0rem;
+    background-color:#fe424d !important;
+    border:none !important; 
+} */
+
+.delete-btn {
+    margin-bottom: 1rem;
+    background-color: pink;
+}
+
+/* show page */
+.show-img {
+    height: 66vh;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#second {
+    display: none;
+}
+
+/* Map */
+
+#map {
+    height: 400px;
+    /* width: 74vw; */
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-text {
+    font-size: 20px;
+}
+.review-form-card, .booking-card{
+    box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent, 0 4px 6px 3px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.share-buttons a {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.share-buttons a:hover {
+    background-color: #f8f9fa;
+    color: #fe424d;
+    transform: translateY(-10px);
+    box-shadow: 1px 2px 9px 4px;
+}
+.btn-custom-delete-review{
+    background-color: #6c757d !important;
+    border: none !important;
+    color: white !important;
+    padding: 0.5rem !important;
+    &:hover{
+        background-color: #52575c !important;
+
+    }
+}
+@media screen and (min-width: 991px) {
+    .iiimgg {
+        height: 75vh;
+        margin: 3px;
+        border-radius: 34px 150px !important;
+        /* height: 30rem !important; */
+        object-fit: contain !important;
+        object-position: center center;
+    }
+
+    #second {
+        display: block;
+        height: 539px;
+        width: 482px ! IMPORTANT;
+        border-radius: 0 0 !important;
+
+    }
+
+
+    .holder {
+        display: flex;
+    }
+}
+
+.reviews-list .card:hover{
+    /* transform: scaleX(1.1); */
+    transition: all 2s linear;
+}
+@media (min-width: 768px) {
+    .reviews-list .col-md-6 {
+        flex: 0 0 auto;
+        width: 97% !important;
+        margin: 0 auto 11px;
+    }
+}
